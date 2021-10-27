@@ -17,6 +17,9 @@
 }
 
 @media (max-width:767px) {
+   ._container {
+      padding: 0;
+   }
    .header__burger {
       display: block;
       position: absolute;
