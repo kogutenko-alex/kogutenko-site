@@ -61,7 +61,7 @@ html, body {
 .header__container {
    display: flex;
    align-items: center;
-   min-height: 145px;
+   min-height: 90px;
 }
 
 .header__logo {
@@ -79,11 +79,11 @@ html, body {
 
 .header__menu {
    margin: 0 0 0 200px;
-}
-
-.menu {
    padding: 5px 0;
 }
+
+/*
+.menu {}*/
 
 .menu__list {
    display: flex;
