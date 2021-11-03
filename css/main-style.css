@@ -34,6 +34,19 @@ html, body {
    background-color: #303030;
 }
 
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   /* Remove default arrow */
+   background-color: inherit;
+   /* Add custom arrow */
+}
+
+input {
+   display: none;
+}
+
 .wrapper {
    min-height: 100%;
    overflow: hidden;
@@ -251,7 +264,7 @@ html, body {
    border-bottom: 1px solid #b69b67;
    font-family: Ubuntu;
    font-size: 40px;
-   line-height: 100px;
+   line-height: 60px;
    font-weight: 300;
    text-transform: uppercase;
    color: #b69b67;
@@ -317,4 +330,223 @@ html, body {
 
 .photo {
    display: none;
+}
+
+/******************************************portfolio**********************/
+
+.portfolio {
+   width: 100%;
+   margin-top: 250px;
+}
+
+.portfolio__container {}
+
+._service-container {}
+
+.portfolio__title {
+   text-align: center;
+   font-family: 'Playfair Display SC';
+   font-size: 60px;
+   line-height: 1.2;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #b4b4b4;
+}
+
+.potfolio__menu {
+   margin: 0 auto;
+   margin-top: 50px;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+}
+
+.portfolio__menu a {
+   text-decoration: none;
+}
+
+.portfolio__menu li {
+   list-style: none;
+}
+
+.portfolio__menu-list {
+   justify-content: space-around;
+   display: flex;
+}
+
+.portfolio__menu-list li {
+   width: 250px;
+   height: 60px;
+   border: 1px solid #b4b4b4;
+}
+
+.portfolio__menu-list span {
+   /*display: block;
+   text-align: center;
+   line-height: 60px;
+   margin: 0;*/
+}
+
+.portfolio__menu-link {
+   margin: 15px 26px;
+   display: block;
+}
+
+.portfolio__menu-list li {
+   position: relative;
+   cursor: pointer;
+}
+
+.portfolio__menu-list li:hover .portfolio__sub-menu-list {
+   display: block;
+}
+
+.portfolio__menu-list li:hover .portfolio__menu-link {
+   color: #b4b4b4;
+}
+
+.portfolio__sub-menu-list {
+   display: none;
+   z-index: 1000;
+   position: absolute;
+   top: 50px;
+   left: -2px;
+   border: 1px solid #b4b4b4;
+}
+
+.portfolio__sub-menu-list li {
+   background: #373737;
+   margin: 0;
+   border: 0;
+}
+
+.portfolio__sub-menu-list li:hover {
+   color: #b69b67;
+}
+
+.portfolio__sub-menu-link {
+   display: inline-block;
+   line-height: 60px;
+   padding: 0 0 0 10px;
+   color: #b4b4b4;
+}
+
+.portfolio__arrow-to-sub-menu-link {}
+
+.portfolio__arrow {
+   position: absolute;
+   right: 15px;
+   top: 23px;
+   width: 0;
+   height: 0;
+   border-top: 10px solid #b4b4b4;
+   border-right: 10px solid transparent;
+   border-left: 10px solid transparent;
+}
+
+body.mouse .portfolio__menu-list>li:hover .portfolio__sub-menu-list {
+   display: block;
+}
+
+.portfolio__items {
+   width: 100%;
+   max-height: 550px;
+   min-height: 250px;
+   height: auto;
+   max-height: fit-content;
+   margin-top: 50px;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 25px 25px;
+}
+
+.portfolio__item {
+   overflow: hidden;
+   position: relative;
+   max-width: 650px;
+   height: 270px;
+   width: auto;
+}
+
+.portfolio__item-content {
+   z-index: 3;
+   position: absolute;
+   width: 45%;
+   height: 100%;
+   right: 0;
+   top: 0;
+   background-color: #b69b67;
+}
+
+.portfolio__item-content__title {
+   justify-content: center;
+   display: block;
+   margin: 25px 0 0 25px;
+   font-family: Ubuntu;
+   font-size: 30px;
+   line-height: 1.2;
+   font-weight: 400;
+   text-transform: uppercase;
+   color: #303030;
+}
+
+.portfolio__item-content__info {
+   margin: 25px 0 0 25px;
+   justify-content: left;
+   display: block;
+   font-family: Ubuntu;
+   font-size: 14.1px;
+   line-height: 20px;
+   font-weight: 500;
+   color: #303030;
+}
+
+.portfolio__item-content__signature {
+   position: absolute;
+   display: block;
+   font-family: Ubuntu;
+   font-size: 12px;
+   font-weight: 300;
+   font-style: italic;
+   color: #303030;
+   right: 0;
+   bottom: 0;
+   margin: 15px 15px;
+}
+
+.portfolio__item-bg {
+   z-index: 1;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: #303030;
+   opacity: 0.5;
+}
+
+.portfolio__items-btn {
+   display: block;
+   text-align: center;
+   margin-top: 25px;
+}
+
+.portfolio__items-btn span:not(:last-child) {
+   border-right: 1px solid #b4b4b4;
+}
+
+.portfolio__items-btn span:not(:first-child) {
+   border-left: 1px solid #b4b4b4;
+}
+
+.portfolio__items-btn span {
+   margin: 0;
+   padding: 0 10px;
+   font-family: Ubuntu;
+   font-size: 18px;
+   line-height: 20px;
+   font-weight: 500;
+   text-transform: uppercase;
+   color: #b4b4b4;
 }
