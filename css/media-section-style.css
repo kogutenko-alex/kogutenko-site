@@ -366,6 +366,20 @@
    }
 }
 
-@media (max-width:767px) {}
+@media (max-width:767px) {
+   .portfolio__item-content__title {
+      font-size: 15px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+   }
+   .portfolio__item-content__info {
+      text-overflow: ellipsis;
+      overflow: hidden;
+   }
+   .portfolio__item-content__signature {
+      text-overflow: ellipsis;
+      overflow: hidden;
+   }
+}
 
 @media (max-width:479px) {}
