@@ -334,7 +334,7 @@
 
 /************************PORTFOLIO************/
 
-@media (max-width:1080px) {
+@media (max-width:1280px) {
    .portfolio__items {
       display: grid;
       grid-template-rows: 1fr 1fr;
