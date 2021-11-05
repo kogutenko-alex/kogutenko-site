@@ -375,6 +375,7 @@
    .portfolio__item-content__info {
       text-overflow: ellipsis;
       overflow: hidden;
+      white-space: nowrap;
    }
    .portfolio__item-content__signature {
       text-overflow: ellipsis;
