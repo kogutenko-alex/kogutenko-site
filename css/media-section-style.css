@@ -341,10 +341,6 @@
       grid-template-columns: 1fr;
       grid-gap: 25px 25px;
    }
-   .portfolio__item {
-      width: 100%;
-      margin: 0 auto;
-   }
 }
 
 @media (max-width: 992px) {
@@ -353,6 +349,20 @@
    }
    .portfolio__title {
       font-size: 50px;
+   }
+   .portfolio__item {
+      width: 100%;
+      height: 180px;
+      margin: 0 auto;
+   }
+   .portfolio__item-content__title {
+      font-size: 20px;
+   }
+   .portfolio__item-content__info {
+      font-size: 10.1px;
+   }
+   .portfolio__item-content__signature {
+      font-size: 9px;
    }
 }
 
