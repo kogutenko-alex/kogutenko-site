@@ -12,66 +12,78 @@ burger.onclick = function () {
 /*
    service activate
 */
-var list_service = document.querySelector('.service__list-items');
-list_service.onmouseover = list_service.onmouseout = handler;
 
-function handler(event) {
-   if (list_service.classList.contains('service_list_active')) {
-      list_service.classList.remove('service_list_active');
-   }
-   if (event.type == 'mouseover') {
-      show_info_service(event);
-   }
-   if (event.type == 'mouseout') {
-      close_info_service(event);
-   }
-}
 
-function show_info_service(event) {
-   var el = event.target;
-   if (el.id !== '') {
-      var class_ = '.' + el.id;
-      el.classList.add('service_list_active');
-      var elem = document.querySelector(class_);
-      switch (el.id) {
-         case 'web':
-            elem.style.display = "block";
-            break;
-         case 'logo':
-            elem.style.display = "block";
-            break;
-         case 'ui':
-            elem.style.display = "block";
-            break;
-         case 'photo':
-            elem.style.display = "block";
-            break;
-      }
-   }
-}
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
-function close_info_service(event) {
-   var el = event.target;
-   if (el.id !== '') {
-      var class_ = '.' + el.id;
-      el.classList.remove('service_list_active');
-      var elem = document.querySelector(class_);
-      switch (el.id) {
-         case 'web':
-            elem.style.display = "none";
-            break;
-         case 'logo':
-            elem.style.display = "none";
-            break;
-         case 'ui':
-            elem.style.display = "none";
-            break;
-         case 'photo':
-            elem.style.display = "none";
-            break;
-      }
-   }
-}
+
+//var list_service = document.querySelector('.service__list-items');
+//list_service.onmouseover = list_service.onmouseout = handler;
+
+//function handler(event) {
+//   if (list_service.classList.contains('service_list_active')) {
+//      list_service.classList.remove('service_list_active');
+//   }
+//   if (event.type == 'mouseover') {
+//      show_info_service(event);
+//   }
+//   if (event.type == 'mouseout') {
+//      close_info_service(event);
+//   }
+//}
+
+//function show_info_service(event) {
+//   var el = event.target;
+//   if (el.id !== '') {
+//      var class_ = '.' + el.id;
+//      el.classList.add('service_list_active');
+//      var elem = document.querySelector(class_);
+//      switch (el.id) {
+//         case 'web':
+//            elem.style.display = "block";
+//            break;
+//         case 'logo':
+//            elem.style.display = "block";
+//            break;
+//         case 'ui':
+//            elem.style.display = "block";
+//            break;
+//         case 'photo':
+//            elem.style.display = "block";
+//            break;
+//      }
+//   }
+//}
+
+//function close_info_service(event) {
+//   var el = event.target;
+//   if (el.id !== '') {
+//      var class_ = '.' + el.id;
+//      el.classList.remove('service_list_active');
+//      var elem = document.querySelector(class_);
+//      switch (el.id) {
+//         case 'web':
+//            elem.style.display = "none";
+//            break;
+//         case 'logo':
+//            elem.style.display = "none";
+//            break;
+//         case 'ui':
+//            elem.style.display = "none";
+//            break;
+//         case 'photo':
+//            elem.style.display = "none";
+//            break;
+//      }
+//   }
+//}
+
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 
 var isMobile = {
@@ -134,28 +146,20 @@ function goToSlide(n) {
    var allSlides = 0;
    var allSlides_ = 0;
    if (window.screen.width > 1280) {
-      console.log("------------start--------------");
       allSlides_ = slides.length / 4; // 2.25
       allSlides = Math.ceil(allSlides_); //3
-      console.log("all slides_: " + allSlides_);
-      console.log("all slides : " + allSlides);
       if (n > allSlides) {
          n = 0;
          currentSlide = 0;
       }
-      console.log("n : " + n);
       var k = 0, index = 0, i = 0;
-      console.log(slides);
       while (i < slides.length) {
          if (slides[i].classList.contains('showing')) {
-            console.log("remove " + i)
             slides[i].classList.remove('showing');
             index = i;
          }
          i++;
       }
-      console.log("--------------------------");
-      console.log(slides);
       if (index == --slides.length) {
          index = -1;
       }
@@ -163,32 +167,23 @@ function goToSlide(n) {
          slides[++index].classList.add('showing');
          k++;
       }
-      console.log("-----------ending------------");
 
    }
    if (window.screen.width <= 1280) {
-      console.log("------------start--------------");
       allSlides_ = slides.length / 2; // 2.25
       allSlides = Math.ceil(allSlides_); //3
-      console.log("all slides_: " + allSlides_);
-      console.log("all slides : " + allSlides);
       if (n > allSlides) {
          n = 0;
          currentSlide = 0;
       }
-      console.log("n : " + n);
       var k = 0, index = 0, i = 0;
-      console.log(slides);
       while (i < slides.length) {
          if (slides[i].classList.contains('showing')) {
-            console.log("remove " + i)
             slides[i].classList.remove('showing');
             index = i;
          }
          i++;
       }
-      console.log("--------------------------");
-      console.log(slides);
       if (index == --slides.length) {
          index = -1;
       }
@@ -196,8 +191,6 @@ function goToSlide(n) {
          slides[++index].classList.add('showing');
          k++;
       }
-      console.log("-----------ending------------");
-
    }
 
 }
@@ -232,3 +225,73 @@ previous.onclick = function () {
    pauseSlideshow();
    previousSlide();
 };
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+var slides_service = document.querySelectorAll('.service__content ._service__content-item');
+var slides_service_items = document.querySelectorAll('.service__list-items .service__list-item');
+var _currentSlide = 0;
+var _slideInterval = setInterval(_nextSlide, 2000);
+
+function _nextSlide() {
+   if (_currentSlide > --slides_service.length) {
+      _currentSlide = 0;
+   }
+   _goToSlide(_currentSlide++);
+}
+function _previousSlide() {
+   if (_currentSlide > slides_service.length) {
+      _currentSlide = 0;
+   }
+   _goToSlide(_currentSlide--);
+}
+
+function _goToSlide(n) {
+   var allSlides = 0;
+   allSlides = slides_service.length; //3
+   console.log(n)
+   var k = 0, index = 0, i = 0;
+   console.log(slides_service_items[n].classList);
+   var item = n;
+   if (slides_service[n].classList.contains('show-service')) {
+      slides_service[n].classList.remove('show-service');
+      slides_service[n].classList.add('hide-service');
+      n++;
+      if (n >= allSlides) {
+         n = 0;
+      }
+      slides_service[n].classList.remove('hide-service');
+      slides_service[n].classList.add('show-service');
+   }
+   console.log(slides_service_items[item])
+   if (slides_service_items[item].classList.contains('service_list_active')) {
+      slides_service_items[item].classList.remove('service_list_active');
+      item++;
+      if (item >= allSlides) {
+         item = 0;
+      }
+      slides_service_items[item].classList.add('service_list_active');
+   }
+   console.log(slides_service_items[item])
+
+}
+
+var _playing = true;
+var _pauseButton = document.getElementById('pause');
+function _pauseSlideshow() {
+   clearInterval(_slideInterval);
+}
+function _playSlideshow() {
+   _slideInterval = setInterval(_nextSlide, 2000);
+}
+document.querySelector('.service-content').onmouseover = function () {
+   _pauseSlideshow();
+};
+document.querySelector('.service-content').onmouseout = function () {
+   _playSlideshow();
+};
+
+

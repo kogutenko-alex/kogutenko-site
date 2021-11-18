@@ -242,6 +242,10 @@ input {
    width: 75%;
 }
 
+.shadow-box {
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .service__list-item {
    cursor: pointer;
    display: block;
@@ -268,6 +272,14 @@ input {
    font-weight: 300;
    text-transform: uppercase;
    color: #b69b67;
+}
+
+.show-service {
+   display: block;
+}
+
+.hide-service {
+   display: none;
 }
 
 .service__content-description p {
@@ -308,29 +320,29 @@ input {
    transition: opacity 1s;
 }
 
-.web {
+/*.web {
    display: block;
 }
 
 .logo {
    display: none;
-}
+}*/
 
 ._service__content-item.logo.service__content-description {
    top: 150px;
 }
 
-.ui {
+/*.ui {
    display: none;
-}
+}*/
 
 ._service__content-item.ui.service__content-description {
    top: 300px;
 }
 
-.photo {
+/*.photo {
    display: none;
-}
+}*/
 
 /******************************************portfolio**********************/
 
