@@ -133,7 +133,7 @@ if (isMobile.any()) {
 
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 2000);
+var slideInterval = setInterval(nextSlide, 3000);
 
 function nextSlide() {
    goToSlide(currentSlide++);
@@ -205,7 +205,7 @@ function pauseSlideshow() {
 function playSlideshow() {
    pauseButton.innerHTML = 'Pause';
    playing = true;
-   slideInterval = setInterval(nextSlide, 2000);
+   slideInterval = setInterval(nextSlide, 3000);
 }
 pauseButton.onclick = function () {
    if (playing) {
@@ -226,6 +226,15 @@ previous.onclick = function () {
    previousSlide();
 };
 
+
+document.querySelector('.portfolio__item').onmouseover = function () {
+   pauseSlideshow();
+};
+
+document.querySelector('.portfolio__item').onmouseout = function () {
+   playSlideshow();
+};
+
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
@@ -234,7 +243,7 @@ previous.onclick = function () {
 var slides_service = document.querySelectorAll('.service__content ._service__content-item');
 var slides_service_items = document.querySelectorAll('.service__list-items .service__list-item');
 var _currentSlide = 0;
-var _slideInterval = setInterval(_nextSlide, 2000);
+var _slideInterval = setInterval(_nextSlide, 3000);
 
 function _nextSlide() {
    if (_currentSlide > --slides_service.length) {
@@ -252,9 +261,6 @@ function _previousSlide() {
 function _goToSlide(n) {
    var allSlides = 0;
    allSlides = slides_service.length; //3
-   console.log(n)
-   var k = 0, index = 0, i = 0;
-   console.log(slides_service_items[n].classList);
    var item = n;
    if (slides_service[n].classList.contains('show-service')) {
       slides_service[n].classList.remove('show-service');
@@ -275,8 +281,6 @@ function _goToSlide(n) {
       }
       slides_service_items[item].classList.add('service_list_active');
    }
-   console.log(slides_service_items[item])
-
 }
 
 var _playing = true;
@@ -285,7 +289,7 @@ function _pauseSlideshow() {
    clearInterval(_slideInterval);
 }
 function _playSlideshow() {
-   _slideInterval = setInterval(_nextSlide, 2000);
+   _slideInterval = setInterval(_nextSlide, 3000);
 }
 document.querySelector('.service-content').onmouseover = function () {
    _pauseSlideshow();

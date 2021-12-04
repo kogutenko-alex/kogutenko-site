@@ -240,6 +240,7 @@ input {
 .service__content {
    flex-grow: 3;
    width: 75%;
+   position: relative;
 }
 
 .shadow-box {
@@ -275,11 +276,15 @@ input {
 }
 
 .show-service {
-   display: block;
+   opacity: 1;
+   visibility: visible;
+   transition: opacity 0.5s;
 }
 
 .hide-service {
-   display: none;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 1s, visibility 1s linear 1s;
 }
 
 .service__content-description p {
@@ -316,8 +321,12 @@ input {
 }
 
 ._service__content-item {
-   position: relative;
-   transition: opacity 1s;
+   position: absolute;
+   display: block;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
 
 /*.web {
@@ -568,11 +577,75 @@ body.mouse .portfolio__menu-list>li:hover .portfolio__sub-menu-list {
 }
 
 .slide {
-   display: none;
    z-index: 1;
+   display: none;
 }
 
 .showing {
    display: block;
    z-index: 2000;
+}
+
+/******************************************contact**********************/
+
+.contact {
+   margin-top: 100px;
+}
+
+.contact__title {
+   text-align: center;
+   font-family: 'Playfair Display SC';
+   font-size: 60px;
+   line-height: 1.2;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #b4b4b4;
+}
+
+.contact__me {
+   margin-top: 80px;
+   display: flex;
+   justify-content: space-around;
+   align-content: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+.contact__me-item {
+   text-align: center;
+}
+
+.contact__me-item p {
+   font-family: Ubuntu;
+   font-size: 30px;
+   line-height: 1.2;
+   font-weight: 300;
+   text-transform: uppercase;
+   color: #b4b4b4;
+}
+
+.contact__me-item a {
+   font-family: Ubuntu;
+   font-size: 30px;
+   line-height: 1.2;
+   font-weight: 300;
+   text-transform: uppercase;
+   color: #b4b4b4;
+}
+
+.contact__me-item__title {
+   margin-bottom: 25px;
+   display: inline;
+   border-top: 3px solid #b69b67;
+   padding-top: 10px;
+   font-family: Ubuntu;
+   font-size: 30px;
+   line-height: 1.2;
+   font-weight: 300;
+   text-transform: uppercase;
+   color: #b69b67;
+}
+
+.contact__me-item__content {
+   margin-top: 50px;
 }
